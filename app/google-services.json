@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "303792812888",
+    "project_id": "huntsman-war",
+    "storage_bucket": "huntsman-war.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:303792812888:android:2203b27a9c026ba0ffeb2d",
+        "android_client_info": {
+          "package_name": "com.omsidh.huntsmanwar"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "303792812888-r8olju4nqomg7ja0uub5u9g050fukv45.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.omsidh.huntsmanwar",
+            "certificate_hash": "72038278ceb4b7153daebba38dd64694fa3b38c1"
+          }
+        },
+        {
+          "client_id": "303792812888-jg9qr275aeqj1rcmv4r9vdh2jl49rmdr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAHXzLNvrhBLKjNSvWCoOc32YzcPL-ogro"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "303792812888-jg9qr275aeqj1rcmv4r9vdh2jl49rmdr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
