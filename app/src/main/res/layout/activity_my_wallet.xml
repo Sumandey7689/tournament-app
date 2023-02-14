@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    android:orientation="vertical"
+    android:id="@+id/mainLayout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".activity.MyWalletActivity"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/collapsing_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true"
+            app:contentScrim="@color/darkBlue"
+            app:expandedTitleTextAppearance="@style/personal_expanded_title"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+            <LinearLayout android:orientation="vertical" android:id="@+id/wallet_view" android:background="@color/colorPrimaryDark" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/my_wallet_appbar">
+                <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="30.0dip">
+                    <ImageView android:visibility="visible" android:layout_width="50.0dip" android:layout_height="60.0dip" android:layout_marginRight="4.0dip" android:src="@drawable/coin_icon" android:scaleType="centerInside" />
+                    <TextView android:textSize="40.0dip" android:textStyle="bold" android:textColor="@android:color/white" android:layout_gravity="center" android:id="@+id/walletBalanceTv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0" />
+                </LinearLayout>
+                <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginTop="30.0dip" android:layout_marginRight="10.0dip" android:layout_marginBottom="15.0dip" android:layout_weight="2.0">
+                    <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0" android:background="@drawable/bg_wallet" android:padding="8dp" android:layout_margin="4dp" >
+                        <TextView android:textSize="18.0dip" android:textStyle="bold" android:textColor="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/deposited" />
+                        <TextView android:textSize="18.0dip" android:textStyle="bold" android:textColor="@color/white" android:layout_gravity="center" android:id="@+id/depositedTv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0" android:drawableLeft="@drawable/coin_icon_16x16" android:drawablePadding="2dp"/>
+                    </LinearLayout>
+                    <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0" android:background="@drawable/bg_wallet" android:padding="8dp" android:layout_margin="4dp">
+                        <TextView android:textSize="18.0dip" android:textStyle="bold" android:textColor="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/winning" />
+                        <TextView android:textSize="18.0dip" android:textStyle="bold" android:textColor="@color/white" android:layout_gravity="center" android:id="@+id/winningTv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0" android:drawableLeft="@drawable/coin_icon_16x16" android:drawablePadding="2dp"/>
+                    </LinearLayout>
+                    <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0" android:background="@drawable/bg_wallet" android:padding="8dp" android:layout_margin="4dp">
+                        <TextView android:textSize="18.0dip" android:textStyle="bold" android:textColor="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/bonus" />
+                        <TextView android:textSize="18.0dip" android:textStyle="bold" android:textColor="@color/white" android:layout_gravity="center" android:id="@+id/bonusTv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0" android:drawableLeft="@drawable/coin_icon_16x16" android:drawablePadding="2dp"/>
+                    </LinearLayout>
+                </LinearLayout>
+                <TextView android:visibility="gone" android:textSize="12.0dip" android:textStyle="bold" android:textColor="@android:color/white" android:layout_gravity="center" android:padding="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/you_can_redeem_only_winning_play_coin" />
+            </LinearLayout>
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:title="My Wallet"
+                app:titleTextColor="@color/white"
+                app:layout_collapseMode="pin"
+                app:contentInsetEnd="0.0dip"
+                app:contentInsetLeft="0.0dip"
+                app:contentInsetRight="0.0dip"
+                app:contentInsetStart="0.0dip"
+                app:elevation="0.0dip"
+                app:theme="@style/MyToolbarTheme" >
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/coinCv"
+                    android:layout_gravity="center"
+                    android:visibility="visible"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10.0dip"
+                    android:layout_weight="0.0"
+                    app:cardCornerRadius="5.0dip">
+                    <com.balysv.materialripple.MaterialRippleLayout
+                        android:id="@+id/mybalanceripple"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content">
+                        <LinearLayout
+                            android:id="@+id/toolbalance"
+                            android:orientation="horizontal"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="4.0dip"
+                            android:layout_marginTop="0.0dip"
+                            android:layout_marginRight="4.0dip"
+                            android:layout_marginBottom="0.0dip" >
+                            <TextView
+                                android:textSize="16.0dip"
+                                android:textStyle="bold"
+                                android:textColor="@android:color/black"
+                                android:layout_gravity="center"
+                                android:id="@+id/coinTv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="0"
+                                android:gravity="center_vertical"
+                                android:drawableLeft="@drawable/coin_icon_16x16"
+                                android:drawablePadding="4dp"/>
+                        </LinearLayout>
+                    </com.balysv.materialripple.MaterialRippleLayout>
+                </androidx.cardview.widget.CardView>
+
+            </androidx.appcompat.widget.Toolbar>
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <com.google.android.material.tabs.TabLayout android:id="@+id/tabLayout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="?actionBarSize" app:tabBackground="@color/darkBlue" app:tabGravity="fill" app:tabIndicatorColor="#ffffffff" app:tabIndicatorHeight="4.0dip" app:tabMode="fixed" app:tabSelectedTextColor="#ffffffff" app:tabTextColor="#ffffffff" />
+        <androidx.viewpager.widget.ViewPager android:id="@+id/viewPager" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
