@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:background="#fffafafa"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragment.MyAccountFragment"
+    xmlns:tools="http://schemas.android.com/tools">
+    <androidx.core.widget.NestedScrollView android:id="@+id/nestedScrollView" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <RelativeLayout android:layout_width="fill_parent" android:layout_height="305.0dip">
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:background="@color/colorPrimaryDark"/>
+                <RelativeLayout android:layout_width="fill_parent" android:layout_height="205.0dip">
+                    <de.hdodenhof.circleimageview.CircleImageView android:layout_gravity="center_vertical" android:id="@+id/profileImage" android:layout_width="100.0dip" android:layout_centerHorizontal="true" android:layout_height="100.0dip" android:layout_marginLeft="25.0dip" android:layout_marginTop="50.0dip" android:src="@drawable/profile" app:civ_border_color="#ff23283a" app:civ_border_width="5.0dip"/>
+                    <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="15dp" android:layout_below="@+id/profileImage" android:layout_centerHorizontal="true">
+                        <TextView android:textSize="18.0sp" android:textColor="#ff000000" android:layout_gravity="center_horizontal" android:id="@+id/name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="My Name" android:fontFamily="@font/lato_black"/>
+                        <LinearLayout android:visibility="gone" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="0.0dip">
+                            <TextView android:textSize="15.0sp" android:textColor="#ff000000" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Username: " android:fontFamily="@font/lato" />
+                            <TextView android:textSize="17.0sp" android:textStyle="bold" android:textColor="#ff000000" android:layout_gravity="center" android:id="@+id/myusername" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="2.0dip" android:text="xyzabc" android:fontFamily="@font/lato" />
+                        </LinearLayout>
+                        <LinearLayout android:visibility="gone" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="0.0dip">
+                            <TextView android:textSize="18.0sp" android:textColor="#ff000000" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Balance: " android:fontFamily="@font/lato" />
+                            <TextView android:textSize="20.0sp" android:textStyle="bold" android:textColor="#ff000000" android:layout_gravity="center" android:id="@+id/myBalance" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:text="₹ 500" android:fontFamily="@font/lato_black" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </RelativeLayout>
+                <androidx.cardview.widget.CardView android:layout_width="fill_parent" android:layout_height="100.0dip" android:layout_marginLeft="25.0dip" android:layout_marginRight="25.0dip" android:layout_marginBottom="5.0dip" android:layout_alignParentBottom="true" android:elevation="3.0dip" app:cardCornerRadius="8.0dip">
+                    <LinearLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:weightSum="3.0">
+                        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@+id/matchesPlayedLL" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent" android:foreground="?android:selectableItemBackground" android:layout_weight="1.0">
+
+                            <TextView
+                                android:id="@+id/matchesPlayed"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/lato_black"
+                                android:gravity="center"
+                                android:text="0"
+                                android:textColor="#000000"
+                                android:textSize="23.0sp"
+                                android:textStyle="bold" />
+                            <TextView android:textSize="13.0sp" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:text="@string/matches_played" android:fontFamily="@font/lato_black" />
+                        </LinearLayout>
+                        <View android:background="#ffb7b7bd" android:layout_width="2.0dip" android:layout_height="fill_parent" android:layout_marginTop="20.0dip" android:layout_marginBottom="20.0dip" />
+                        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@+id/totalKillsLL" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent" android:foreground="?android:selectableItemBackground" android:layout_weight="1.0">
+
+                            <TextView
+                                android:id="@+id/myKills"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/lato_black"
+                                android:text="0"
+                                android:textColor="#000000"
+                                android:textSize="23.0sp"
+                                android:textStyle="bold" />
+                            <TextView android:textSize="13.0sp" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:text="@string/total_kills" android:fontFamily="@font/lato_black" />
+                        </LinearLayout>
+                        <View android:background="#ffb7b7bd" android:layout_width="2.0dip" android:layout_height="fill_parent" android:layout_marginTop="20.0dip" android:layout_marginBottom="20.0dip" />
+                        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@+id/amountWonLL" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent" android:foreground="?android:selectableItemBackground" android:layout_weight="1.0">
+
+                            <TextView
+                                android:id="@+id/amountWon"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:drawableStart="@drawable/coin_icon_22x22"
+                                android:drawablePadding="4dp"
+                                android:fontFamily="@font/lato_black"
+                                android:gravity="center|center_vertical"
+                                android:text="0"
+                                android:textColor="#000000"
+                                android:textSize="23.0sp"
+                                android:textStyle="bold" />
+                            <TextView android:textSize="13.0sp" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:text="@string/playcoin_won" android:fontFamily="@font/lato_black" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+            </RelativeLayout>
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:layout_marginTop="13.0dip" android:layout_marginRight="20.0dip" android:layout_marginBottom="10.0dip">
+                <androidx.cardview.widget.CardView android:id="@+id/profileCard" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="5.0dip" android:foreground="?android:selectableItemBackground" app:cardCornerRadius="3.0dip" app:cardPreventCornerOverlap="true">
+                    <RelativeLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="25.0dip" android:layout_marginTop="10.0dip" android:layout_marginRight="25.0dip" android:layout_marginBottom="10.0dip">
+                        <ImageView android:id="@+id/profileIcon" android:layout_width="wrap_content" android:layout_height="wrap_content" app:srcCompat="@drawable/ic_account" android:layout_centerVertical="true" />
+                        <TextView android:textSize="17.0sp" android:textStyle="normal" android:id="@+id/profileText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="15.0dip" android:text="@string/my_profile" android:layout_toRightOf="@+id/profileIcon" android:layout_centerVertical="true" android:fontFamily="@font/lato_black" />
+                        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" app:srcCompat="@drawable/ic_navigate" android:layout_alignParentEnd="true" />
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView android:id="@+id/myWalletCard" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="5.0dip" android:foreground="?android:selectableItemBackground" app:cardCornerRadius="3.0dip" app:cardPreventCornerOverlap="true">
+                    <RelativeLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="25.0dip" android:layout_marginTop="10.0dip" android:layout_marginRight="25.0dip" android:layout_marginBottom="10.0dip">
+                        <ImageView android:id="@+id/walletIcon" android:layout_width="wrap_content" android:layout_height="wrap_content" app:srcCompat="@drawable/ic_wallet" android:layout_centerVertical="true" />
+                        <TextView android:textSize="17.0sp" android:textStyle="bold" android:id="@+id/walletText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="15.0dip" android:text="@string/my_wallet" android:layout_toRightOf="@+id/walletIcon" android:layout_centerVertical="true" android:fontFamily="@font/lato_black" />
+                        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" app:srcCompat="@drawable/ic_navigate" android:layout_alignParentEnd="true" />
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView android:id="@+id/statsCard" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="5.0dip" android:foreground="?android:selectableItemBackground" android:elevation="3.0dip" app:cardCornerRadius="5.0dip" app:cardPreventCornerOverlap="true">
+                    <RelativeLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="25.0dip" android:layout_marginTop="10.0dip" android:layout_marginRight="25.0dip" android:layout_marginBottom="10.0dip">
+                        <ImageView android:id="@+id/statisticsIcon" android:layout_width="wrap_content" android:layout_height="wrap_content" app:srcCompat="@drawable/ic_chart" android:layout_centerVertical="true" />
+                        <TextView android:textSize="17.0sp" android:textStyle="bold" android:id="@+id/statisticsText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="15.0dip" android:text="@string/my_statistics" android:layout_toRightOf="@+id/statisticsIcon" android:layout_centerVertical="true" android:fontFamily="@font/lato_black" />
+                        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" app:srcCompat="@drawable/ic_navigate" android:layout_alignParentEnd="true" />
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView android:id="@+id/topPlayersCard" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="5.0dip" android:foreground="?android:selectableItemBackground" android:elevation="3.0dip" app:cardCornerRadius="5.0dip" app:cardPreventCornerOverlap="true">
+                    <RelativeLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="25.0dip" android:layout_marginTop="10.0dip" android:layout_marginRight="25.0dip" android:layout_marginBottom="10.0dip">
+                        <ImageView android:id="@+id/topPlayersIcon" android:layout_width="wrap_content" android:layout_height="wrap_content" app:srcCompat="@drawable/trophy" android:layout_centerVertical="true" />
+                        <TextView android:textSize="17.0sp" android:textStyle="bold" android:id="@+id/topPlayersText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="15.0dip" android:text="@string/top_players" android:layout_toRightOf="@+id/topPlayersIcon" android:layout_centerVertical="true" android:fontFamily="@font/lato_black" />
+                        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" app:srcCompat="@drawable/ic_navigate" android:layout_alignParentEnd="true" />
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView android:id="@+id/impUpdates" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="5.0dip" android:foreground="?android:selectableItemBackground" android:elevation="3.0dip" app:cardCornerRadius="5.0dip" app:cardPreventCornerOverlap="true">
+                    <RelativeLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="25.0dip" android:layout_marginTop="10.0dip" android:layout_marginRight="25.0dip" android:layout_marginBottom="10.0dip">
+                        <ImageView android:id="@+id/newNotiIcon" android:layout_width="wrap_content" android:layout_height="wrap_content" app:srcCompat="@drawable/ic_notifications_active_black_24dp" android:layout_centerVertical="true" />
+                        <TextView android:textSize="17.0sp" android:textStyle="bold" android:id="@+id/newNotiText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="15.0dip" android:text="Notifications" android:layout_toRightOf="@+id/newNotiIcon" android:layout_centerVertical="true" android:fontFamily="@font/lato_black" />
+                        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" app:srcCompat="@drawable/ic_navigate" android:layout_alignParentEnd="true" />
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView android:id="@+id/customerSupportCard" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="5.0dip" android:foreground="?android:selectableItemBackground" android:elevation="3.0dip" app:cardCornerRadius="5.0dip" app:cardPreventCornerOverlap="true">
+                    <RelativeLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="25.0dip" android:layout_marginTop="10.0dip" android:layout_marginRight="25.0dip" android:layout_marginBottom="10.0dip">
+                        <ImageView android:id="@+id/customerSupportIcon" android:layout_width="wrap_content" android:layout_height="wrap_content" app:srcCompat="@drawable/customer_support" android:layout_centerVertical="true" />
+                        <TextView android:textSize="17.0sp" android:textStyle="bold" android:id="@+id/customerSupportText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="15.0dip" android:text="@string/customer_support" android:layout_toRightOf="@+id/customerSupportIcon" android:layout_centerVertical="true" android:fontFamily="@font/lato_black" />
+                        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" app:srcCompat="@drawable/ic_navigate" android:layout_alignParentEnd="true" />
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView android:id="@+id/settingsCard" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="5.0dip" android:foreground="?android:selectableItemBackground" android:elevation="3.0dip" app:cardCornerRadius="5.0dip" app:cardPreventCornerOverlap="true">
+                    <RelativeLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="25.0dip" android:layout_marginTop="10.0dip" android:layout_marginRight="25.0dip" android:layout_marginBottom="10.0dip">
+                        <ImageView android:id="@+id/settingsIcon" android:layout_width="wrap_content" android:layout_height="wrap_content" app:srcCompat="@drawable/ic_settings" android:layout_centerVertical="true" />
+                        <TextView android:textSize="17.0sp" android:textStyle="bold" android:id="@+id/settingsText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="15.0dip" android:text="Settings" android:layout_toRightOf="@+id/settingsIcon" android:layout_centerVertical="true" android:fontFamily="@font/lato_black" />
+                        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" app:srcCompat="@drawable/ic_navigate" android:layout_alignParentEnd="true" />
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+                <TextView android:gravity="center" android:layout_gravity="center" android:id="@+id/appVersion" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:layout_marginTop="7.0dip" android:layout_marginRight="5.0dip" android:layout_marginBottom="20.0dip" android:text="App Version: v0.1" android:fontFamily="@font/lato" />
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

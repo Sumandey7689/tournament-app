@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/darkBlue"
+    tools:context=".activity.UpdateAppActivity">
+
+    <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" android:layout_margin="@dimen/spacing_large">
+        <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" >
+            <ImageView android:layout_gravity="center" android:layout_width="100.0dip" android:layout_height="100.0dip" android:src="@drawable/new_update" android:paddingEnd="@dimen/spacing_mlarge" />
+            <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <TextView android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" android:textStyle="bold" android:textColor="@color/colorAccent" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/new_update_is_available" />
+                <TextView android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium" android:textColor="#ffffffff" android:id="@+id/version" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/new_version_v1_5" />
+                <TextView android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium" android:textColor="#ffffffff" android:id="@+id/date" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/updated_on_16_10_2018" />
+            </LinearLayout>
+        </LinearLayout>
+        <TextView android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" android:textColor="@color/colorAccent" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="15.0dip" android:layout_marginTop="20.0dip" android:text="@string/what_s_new" />
+        <TextView android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium" android:textColor="#ffffffff" android:id="@+id/whatsnew" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="15.0dip" android:layout_marginTop="15.0dip" android:layout_marginRight="15.0dip" android:text="• Bug Fixed\n• New Layout\n• Improved User Interface\n• Reduced App Size\n• Added More Ways to Earn" android:fontFamily="@font/lato" />
+        <TextView android:textAppearance="@style/Base.TextAppearance.AppCompat.Small" android:textSize="17.0sp" android:textColor="#ffffffff" android:id="@+id/forceUpdateNote" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:layout_marginTop="15.0dip" android:layout_marginRight="15.0dip" android:layout_marginBottom="30.0dip" android:text="@string/forceUpdateNote" android:fontFamily="@font/lato" />
+        <Button android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium" android:textColor="@color/white" android:id="@+id/webupdate" android:background="#ff0099cc" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="15.0dip" android:layout_marginTop="10.0dip" android:layout_marginRight="15.0dip" android:layout_marginBottom="2.0dip" android:foreground="?android:selectableItemBackground" android:text="@string/update" />
+    </LinearLayout>
+
+</RelativeLayout>

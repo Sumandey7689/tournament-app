@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/darkBlue"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <androidx.appcompat.widget.Toolbar
+        android:gravity="center_vertical"
+        android:id="@+id/toolbar"
+        android:background="@color/darkBlue"
+        android:layout_width="fill_parent"
+        android:layout_height="?actionBarSize"
+        app:layout_collapseMode="pin"
+        app:layout_scrollFlags="enterAlways|scroll"
+        app:theme="@style/MyToolbarTheme"
+        app:title="@string/app_name" />
+    <TextView android:textAppearance="@style/TextAppearance.AppCompat.Small" android:textStyle="bold" android:textColor="@color/colorAccent" android:id="@+id/lblTC1" android:layout_below="@+id/toolbar" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:text="*Room id and password will displayed here\ 4 to 6 mins prior to match" android:textAllCaps="true" android:layout_marginStart="8dp" android:layout_marginEnd="8dp" />
+    <TextView android:textAppearance="@style/TextAppearance.AppCompat.Small" android:textStyle="bold" android:textColor="@color/colorAccent" android:id="@+id/lblTC2" android:layout_below="@id/lblTC1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="*Stay in your given room slot or you will be kicked from the room" android:textAllCaps="true" android:layout_marginStart="8dp" android:layout_marginEnd="8dp" />
+    <TextView android:textAppearance="@style/TextAppearance.AppCompat.Small" android:textStyle="bold" android:textColor="@color/white" android:gravity="center" android:id="@+id/textView35" android:layout_below="@id/lblTC2" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:text="How to Join Custom Room ?" android:textAllCaps="true" android:layout_marginStart="8dp" android:layout_marginEnd="8dp" />
+    <Button android:id="@+id/btnTC" android:layout_below="@id/textView35" android:background="@drawable/rounded_blue" android:paddingLeft="20dp" android:paddingRight="20dp" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="Terms And Condition" android:onClick="ontcClick" />
+    <RelativeLayout android:id="@+id/roomIDPassRL" android:layout_centerInParent="true" android:visibility="visible" android:layout_width="300dp" android:layout_height="250dp" android:layout_margin="32dp">
+        <ImageView android:id="@+id/imageView9" android:scaleType="fitCenter" android:visibility="visible" android:layout_width="match_parent" android:layout_height="wrap_content" android:alpha="0.1"  android:src="@drawable/ic_logo" android:layout_centerInParent="true"/>
+        <TextView android:visibility="gone" android:textSize="17.0sp" android:id="@+id/upcomingText" android:textStyle="bold" android:textAlignment="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="15dp" android:text="@string/upcoming_username_and_password" android:textColor="@color/colorWhite" android:layout_centerInParent="true" android:fontFamily="@font/lato" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:visibility="visible"
+        android:id="@+id/onGoingLL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerInParent="true">
+        <TextView android:textAllCaps="true" android:layout_gravity="center_horizontal" android:textSize="17.0sp" android:id="@+id/roomIDText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:layout_marginBottom="5.0dip" android:text="Room ID:  " android:textColor="@color/white" android:fontFamily="@font/lato" />
+        <TextView android:layout_gravity="center_horizontal" android:textSize="17.0sp" android:id="@+id/roomIDValue" android:layout_toEndOf="@+id/roomIDText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:layout_marginBottom="5.0dip" android:text="ROOMID" android:textColor="@color/white" android:fontFamily="@font/lato_black" />
+        <TextView android:textAllCaps="true" android:layout_gravity="center_horizontal" android:textSize="17.0sp" android:id="@+id/roomPassText" android:layout_below="@+id/roomIDText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:layout_marginBottom="5.0dip" android:text="Room Password:  " android:textColor="@color/white" android:fontFamily="@font/lato" />
+        <TextView android:layout_gravity="center_horizontal" android:textSize="17.0sp" android:id="@+id/roomPassValue" android:layout_below="@+id/roomIDText" android:layout_toEndOf="@+id/roomPassText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:layout_marginBottom="5.0dip" android:text="ROOMPASS" android:textColor="@color/white" android:fontFamily="@font/lato_black" />
+        <TextView android:textAllCaps="true" android:layout_gravity="center_horizontal" android:textSize="17.0sp" android:id="@+id/roomSlotText" android:layout_below="@+id/roomPassText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:layout_marginBottom="5.0dip" android:text="Room Slot:  " android:textColor="@color/white" android:fontFamily="@font/lato" />
+        <TextView android:layout_gravity="center_horizontal" android:textSize="17.0sp" android:id="@+id/roomSlotValue" android:layout_below="@+id/roomPassText" android:layout_toEndOf="@+id/roomSlotText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:layout_marginBottom="5.0dip" android:text="ROOMSLOT" android:textColor="@color/white"  android:fontFamily="@font/lato_black" />
+    </RelativeLayout>
+    <LinearLayout android:orientation="vertical" android:id="@+id/linearLayout4" android:background="@color/colorAccent" android:padding="0dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:background="@color/blueRandom">
+            <Button android:id="@+id/textView32" android:textSize="15sp" android:textColor="#ffffffff" android:background="@color/transparent" android:paddingTop="10dp" android:paddingBottom="10dp" android:visibility="visible" android:clickable="true" android:layout_width="0dp" android:layout_height="?attr/actionBarSize" android:foreground="?android:attr/selectableItemBackground" android:text="VIEW MATCH" android:drawablePadding="10dp" android:layout_weight="1" android:textAllCaps="true" android:fontFamily="@font/lato_black"/>
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@color/white"/>
+            <Button android:id="@+id/textView67" android:textSize="15sp" android:textColor="#ffffffff" android:background="@color/transparent" android:paddingTop="10.0dip" android:paddingBottom="10.0dip" android:visibility="visible" android:clickable="true" android:layout_width="0dp" android:layout_height="?actionBarSize" android:foreground="?android:selectableItemBackground" android:text="VIEW ENTRIES" android:drawablePadding="10dp" android:layout_weight="1" android:textAllCaps="true" android:fontFamily="@font/lato_black"/>
+        </LinearLayout>
+        <TextView android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium" android:textStyle="bold" android:gravity="center" android:id="@+id/textView40" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Game Start In" android:layout_marginTop="10dp" android:layout_marginBottom="10dp"/>
+        <TextView android:visibility="gone" android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium" android:textStyle="normal" android:gravity="center" android:id="@+id/textView41" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Sorry for delay. We are running out of time. Kindly wait few minutes for the id and password." android:layout_marginTop="10dp" android:layout_marginBottom="10dp"/>
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@+id/activity_countdown_wheels_layout" android:paddingLeft="20dp" android:paddingRight="20dp" android:layout_width="match_parent" android:layout_height="match_parent"
+            android:baselineAligned="false">
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+                <ProgressBar
+                    android:layout_gravity="center"
+                    android:id="@+id/pg_countdown_timer_days"
+                    android:layout_width="85dp"
+                    android:layout_height="85dp"
+                    android:secondaryProgressTint="@color/grey_100"
+                    android:progressTint="@color/blueRandom"
+                    android:indeterminate="false"
+                    android:progressDrawable="@drawable/circular_progress_bar"
+                    android:background="@drawable/circle_shape"
+                    style="?android:attr/progressBarStyleHorizontal" />
+                <TextView
+                    android:layout_gravity="center"
+                    android:id="@+id/tv_countdown_timer_days"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="0"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="24sp"/>
+            </FrameLayout>
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+                <ProgressBar
+                    android:layout_gravity="center"
+                    android:id="@+id/pg_countdown_timer_hours"
+                    android:layout_width="85dp"
+                    android:layout_height="85dp"
+                    android:secondaryProgressTint="@color/grey_100"
+                    android:progressTint="@color/blueRandom"
+                    android:indeterminate="false"
+                    android:progressDrawable="@drawable/circular_progress_bar"
+                    android:background="@drawable/circle_shape"
+                    style="?android:attr/progressBarStyleHorizontal" />
+                <TextView
+                    android:layout_gravity="center"
+                    android:id="@+id/tv_countdown_timer_hours"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="0"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="24sp"/>
+            </FrameLayout>
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+                <ProgressBar
+                    android:layout_gravity="center"
+                    android:id="@+id/pg_countdown_timer_minutes"
+                    android:layout_width="85dp"
+                    android:layout_height="85dp"
+                    android:secondaryProgressTint="@color/grey_100"
+                    android:progressTint="@color/blueRandom"
+                    android:indeterminate="false"
+                    android:progressDrawable="@drawable/circular_progress_bar"
+                    android:background="@drawable/circle_shape"
+                    style="?android:attr/progressBarStyleHorizontal" />
+                <TextView
+                    android:layout_gravity="center"
+                    android:id="@+id/tv_countdown_timer_minutes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="0"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="24sp"/>
+            </FrameLayout>
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+                <ProgressBar
+                    android:layout_gravity="center"
+                    android:id="@+id/pg_countdown_timer_seconds"
+                    android:layout_width="85dp"
+                    android:layout_height="85dp"
+                    android:secondaryProgressTint="@color/grey_100"
+                    android:progressTint="@color/blueRandom"
+                    android:indeterminate="false"
+                    android:progressDrawable="@drawable/circular_progress_bar"
+                    android:background="@drawable/circle_shape"
+                    style="?android:attr/progressBarStyleHorizontal" />
+                <TextView
+                    android:layout_gravity="center"
+                    android:id="@+id/tv_countdown_timer_seconds"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="0"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="24sp"/>
+            </FrameLayout>
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:id="@+id/activity_countdown_labels_layout" android:paddingLeft="20dp" android:paddingRight="20dp" android:layout_width="match_parent" android:layout_height="wrap_content" >
+            <TextView android:textSize="12sp" android:textColor="@color/white" android:gravity="center" android:layout_gravity="center_vertical" android:id="@+id/activity_countdown_timer_days_text" android:tag="Thin" android:layout_width="0dp" android:layout_height="wrap_content" android:text="Days" android:layout_weight="1"/>
+            <TextView android:textSize="12sp" android:textColor="@color/white" android:gravity="center" android:layout_gravity="center_vertical" android:id="@+id/activity_countdown_timer_hours_text" android:tag="Thin" android:layout_width="0dp" android:layout_height="wrap_content" android:text="Hours" android:layout_weight="1"/>
+            <TextView android:textSize="12sp" android:textColor="@color/white" android:gravity="center" android:layout_gravity="center_vertical" android:id="@+id/activity_countdown_timer_minutes_text" android:tag="Thin" android:layout_width="0dp" android:layout_height="wrap_content" android:text="Minutes" android:layout_weight="1"/>
+            <TextView android:textSize="12sp" android:textColor="@color/white" android:gravity="center" android:layout_gravity="center_vertical" android:id="@+id/activity_countdown_timer_seconds_text" android:tag="Thin" android:layout_width="0dp" android:layout_height="wrap_content" android:text="Seconds" android:layout_weight="1"/>
+        </LinearLayout>
+        <LinearLayout android:background="@color/blueRandom" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" >
+            <Button android:textSize="15sp" android:textColor="#ffffffff" android:id="@+id/entryButton" android:background="@color/transparent" android:paddingTop="10dp" android:paddingBottom="10dp" android:visibility="visible" android:clickable="true" android:layout_width="0dp" android:layout_height="?attr/actionBarSize" android:foreground="?android:attr/selectableItemBackground" android:text="MY ENTRIES" android:drawablePadding="10dp" android:layout_weight="1" android:textAllCaps="true" android:fontFamily="@font/lato_black" />
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@color/white"/>
+            <Button android:textSize="15sp" android:textColor="#ffffffff" android:id="@+id/joinButton" android:background="@color/transparent" android:paddingTop="10.0dip" android:paddingBottom="10.0dip" android:visibility="visible" android:clickable="true" android:layout_width="0dp" android:layout_height="?actionBarSize" android:foreground="?android:selectableItemBackground" android:text="JOIN NOW" android:drawablePadding="10dp" android:layout_weight="1" android:textAllCaps="true" android:fontFamily="@font/lato_black"
+                tools:ignore="ButtonStyle" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

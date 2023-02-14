@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fffafafa"
+    android:orientation="vertical"
+    tools:context=".activity.SettingActivity">
+
+    <include layout="@layout/appbar" />
+
+    <androidx.core.widget.NestedScrollView android:id="@+id/nestedScrollView" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:layout_marginTop="13.0dip" android:layout_marginRight="20.0dip" android:layout_marginBottom="10.0dip">
+            <androidx.cardview.widget.CardView android:id="@+id/notificationCard" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="5.0dip" android:foreground="?android:selectableItemBackground" android:elevation="3.0dip" app:cardCornerRadius="5.0dip" app:cardPreventCornerOverlap="true">
+                <RelativeLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="25.0dip" android:layout_marginTop="10.0dip" android:layout_marginRight="25.0dip" android:layout_marginBottom="10.0dip">
+                    <ImageView android:id="@+id/newNotificationIcon" android:layout_width="wrap_content" android:layout_height="wrap_content" app:srcCompat="@drawable/ic_notifications_active_black_24dp" android:layout_centerVertical="true" />
+                    <TextView android:textSize="17.0sp" android:textStyle="bold" android:id="@+id/newNotificationText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="15.0dip" android:text="Push Notification" android:layout_toRightOf="@+id/newNotificationIcon" android:layout_centerVertical="true" android:fontFamily="@font/lato_black" />
+                    <androidx.appcompat.widget.SwitchCompat android:layout_width="wrap_content" android:id="@+id/switch_notification" android:layout_height="wrap_content" android:layout_alignParentEnd="true"   android:checked="false" android:theme="@style/SCBSwitch" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView android:id="@+id/faqCard" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="5.0dip" android:foreground="?android:selectableItemBackground" android:elevation="3.0dip" app:cardCornerRadius="5.0dip" app:cardPreventCornerOverlap="true">
+                <RelativeLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="25.0dip" android:layout_marginTop="10.0dip" android:layout_marginRight="25.0dip" android:layout_marginBottom="10.0dip">
+                    <ImageView android:id="@+id/faqIcon" android:layout_width="wrap_content" android:layout_height="wrap_content" app:srcCompat="@drawable/ic_info" android:layout_centerVertical="true" />
+                    <TextView android:textSize="17.0sp" android:textStyle="bold" android:id="@+id/faqText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="15.0dip" android:text="@string/faq" android:layout_toRightOf="@+id/faqIcon" android:layout_centerVertical="true" android:fontFamily="@font/lato_black" />
+                    <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" app:srcCompat="@drawable/ic_navigate" android:layout_alignParentEnd="true" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView android:id="@+id/aboutUsCard" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="5.0dip" android:foreground="?android:selectableItemBackground" android:elevation="3.0dip" app:cardCornerRadius="5.0dip" app:cardPreventCornerOverlap="true">
+                <RelativeLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="25.0dip" android:layout_marginTop="10.0dip" android:layout_marginRight="25.0dip" android:layout_marginBottom="10.0dip">
+                    <ImageView android:id="@+id/aboutIcon" android:layout_width="wrap_content" android:layout_height="wrap_content" app:srcCompat="@drawable/ic_info_black_24dp" android:layout_centerVertical="true" />
+                    <TextView android:textSize="17.0sp" android:textStyle="bold" android:id="@+id/aboutText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="15.0dip" android:text="@string/about_us" android:layout_toRightOf="@+id/aboutIcon" android:layout_centerVertical="true" android:fontFamily="@font/lato_black" />
+                    <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" app:srcCompat="@drawable/ic_navigate" android:layout_alignParentEnd="true" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView android:id="@+id/privacyCard" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="5.0dip" android:foreground="?android:selectableItemBackground" android:elevation="3.0dip" app:cardCornerRadius="5.0dip" app:cardPreventCornerOverlap="true">
+                <RelativeLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="25.0dip" android:layout_marginTop="10.0dip" android:layout_marginRight="25.0dip" android:layout_marginBottom="10.0dip">
+                    <ImageView android:id="@+id/newPrivacyIcon" android:layout_width="wrap_content" android:layout_height="wrap_content" app:srcCompat="@drawable/lock" android:layout_centerVertical="true" />
+                    <TextView android:textSize="17.0sp" android:textStyle="bold" android:id="@+id/newPrivacyText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="15.0dip" android:text="@string/privacy_policy" android:layout_toRightOf="@+id/newPrivacyIcon" android:layout_centerVertical="true" android:fontFamily="@font/lato_black" />
+                    <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" app:srcCompat="@drawable/ic_navigate" android:layout_alignParentEnd="true" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView android:id="@+id/termsCard" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="5.0dip" android:foreground="?android:selectableItemBackground" android:elevation="3.0dip" app:cardCornerRadius="5.0dip" app:cardPreventCornerOverlap="true">
+                <RelativeLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="25.0dip" android:layout_marginTop="10.0dip" android:layout_marginRight="25.0dip" android:layout_marginBottom="10.0dip">
+                    <ImageView android:id="@+id/newTermsIcon" android:layout_width="wrap_content" android:layout_height="wrap_content" app:srcCompat="@drawable/ic_security" android:layout_centerVertical="true" />
+                    <TextView android:textSize="17.0sp" android:textStyle="bold" android:id="@+id/newTermsText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="15.0dip" android:text="Terms &amp; Conditions" android:layout_toRightOf="@+id/newTermsIcon" android:layout_centerVertical="true" android:fontFamily="@font/lato_black" />
+                    <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" app:srcCompat="@drawable/ic_navigate" android:layout_alignParentEnd="true" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView android:id="@+id/rateCard" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="5.0dip" android:foreground="?android:selectableItemBackground" android:elevation="3.0dip" app:cardCornerRadius="5.0dip" app:cardPreventCornerOverlap="true">
+                <RelativeLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="25.0dip" android:layout_marginTop="10.0dip" android:layout_marginRight="25.0dip" android:layout_marginBottom="10.0dip">
+                    <ImageView android:id="@+id/rateIcon" android:layout_width="wrap_content" android:layout_height="wrap_content" app:srcCompat="@drawable/ic_star" android:layout_centerVertical="true" />
+                    <TextView android:textSize="17.0sp" android:textStyle="bold" android:id="@+id/rateText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="15.0dip" android:text="Rate App" android:layout_toRightOf="@+id/rateIcon" android:layout_centerVertical="true" android:fontFamily="@font/lato_black" />
+                    <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" app:srcCompat="@drawable/ic_navigate" android:layout_alignParentEnd="true" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView android:id="@+id/shareCard" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="5.0dip" android:foreground="?android:selectableItemBackground" android:elevation="3.0dip" app:cardCornerRadius="5.0dip" app:cardPreventCornerOverlap="true">
+                <RelativeLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="25.0dip" android:layout_marginTop="10.0dip" android:layout_marginRight="25.0dip" android:layout_marginBottom="10.0dip">
+                    <ImageView android:id="@+id/shareIcon" android:layout_width="wrap_content" android:layout_height="wrap_content" app:srcCompat="@drawable/ic_share" android:layout_centerVertical="true" />
+                    <TextView android:textSize="17.0sp" android:textStyle="bold" android:id="@+id/shareText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="15.0dip" android:text="@string/share_app" android:layout_toRightOf="@+id/shareIcon" android:layout_centerVertical="true" android:fontFamily="@font/lato_black" />
+                    <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" app:srcCompat="@drawable/ic_navigate" android:layout_alignParentEnd="true" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView android:visibility="gone" android:id="@+id/moreCard" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="5.0dip" android:foreground="?android:selectableItemBackground" android:elevation="3.0dip" app:cardCornerRadius="5.0dip" app:cardPreventCornerOverlap="true">
+                <RelativeLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="25.0dip" android:layout_marginTop="10.0dip" android:layout_marginRight="25.0dip" android:layout_marginBottom="10.0dip">
+                    <ImageView android:id="@+id/moreIcon" android:layout_width="wrap_content" android:layout_height="wrap_content" app:srcCompat="@drawable/ic_more" android:layout_centerVertical="true" />
+                    <TextView android:textSize="17.0sp" android:textStyle="bold" android:id="@+id/moreText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="15.0dip" android:text="More App" android:layout_toRightOf="@+id/moreIcon" android:layout_centerVertical="true" android:fontFamily="@font/lato_black" />
+                    <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" app:srcCompat="@drawable/ic_navigate" android:layout_alignParentEnd="true" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView android:id="@+id/logOutCard" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="5.0dip" android:foreground="?android:selectableItemBackground" android:elevation="3.0dip" app:cardCornerRadius="5.0dip" app:cardPreventCornerOverlap="true">
+                <RelativeLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="25.0dip" android:layout_marginTop="10.0dip" android:layout_marginRight="25.0dip" android:layout_marginBottom="10.0dip">
+                    <ImageView android:id="@+id/logoutIcon" android:layout_width="wrap_content" android:layout_height="wrap_content" app:srcCompat="@drawable/ic_logout" android:layout_centerVertical="true" />
+                    <TextView android:textSize="17.0sp" android:textStyle="bold" android:id="@+id/logoutText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="15.0dip" android:text="@string/logout" android:layout_toRightOf="@+id/logoutIcon" android:layout_centerVertical="true" android:fontFamily="@font/lato_black" />
+                    <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" app:srcCompat="@drawable/ic_navigate" android:layout_alignParentEnd="true" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+            <TextView android:gravity="center" android:layout_gravity="center" android:id="@+id/appVersion" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:layout_marginTop="7.0dip" android:layout_marginRight="5.0dip" android:layout_marginBottom="20.0dip" android:text="App Version: v0.1" android:fontFamily="@font/lato" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>
